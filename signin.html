@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRS — Sign In</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+ <body class="signin">
+  <main class="d-flex flex-column gap-4 justify-content-center align-items-center min-vh-100">
+      <svg width="70" height="59" viewBox="0 0 50 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z" fill="#007AFF" />
+          <path d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z" fill="#312ECB" />
+        </svg>
+        <span class="small mx-2 fw-semibold">Purchase Request System</span>
+    <div class="card w-25 h-25 p-4">
+      <h4 class="card-title">Sign in</h4>
+        <form class="d-flex flex-column" novalidate data-success="/products.html">
+        <div class="mb-3 w-50">
+  <label for="username" class="form-label">Username</label>
+  <input id="username" type="text" class="form-control" placeholder="Enter username" required />
+  <div class="invalid-feedback">Username is required</div>
+</div>
+<div class="mb-3 w-50">
+  <label for="password" class="form-label">Password</label>
+  <input id="password" type="password" class="form-control" placeholder="Enter password" required  />
+  <div class="invalid-feedback">Password is required</div>
+</div>
+          <div class="mb-4 form-text">
+            <a href="#">Forgot It?</a>
+          </div>
+         <div class="mb-3 d-grid gap-2">
+  <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
+</div>
+        </form>
+      </div>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
+  </body>
+</html>>

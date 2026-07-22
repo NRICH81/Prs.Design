@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRS — Requests</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    {{> header}}
+    <main class="d-flex">
+      {{> nav}}
+     <section class="content p-4 flex-grow-1">
+        <div class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2">
+  <h2>Requests</h2>
+  <a href="/order-create.html" class="btn btn-primary">
+    <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+      <use href="/assets/bootstrap-icons.svg#plus" />
+    </svg>
+    Create A Request
+  </a>
+  </div>
+  <div class="d-flex flex-column mb-4" style="width: 250px">
+  <label for="status" class="form-label">Status</label>
+  <select id="status" class="form-select">
+    <option value="">All</option>
+    <option value="Approved" >Approved</option>
+    <option value="New">New</option>
+    <option value="Review">Review</option>
+    <option value="REJECTED">Rejected</option>
+
+  </select>
+  
+</div>
+<section class="list d-flex flex-row flex-wrap bg-body-tertiary gap-5 p-4 rounded-4">
+  <table class="table table-hover w-100 rounded-4">
+    <thead>
+      <tr>
+        <th scope="col">Order #</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+        <th scope="col">Total</th>
+        <th scope="col">Requested By</th>
+       
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">201</th>
+       
+         <td><span class="text-body-secondary small text-wrap">Swingline Stapler</span></td>
+           <td><span class="badge text-bg-success" >Approved</span></td>
+        <td><span class="text-body-secondary small text-wrap">$14.95</span></td>
+        
+        <td>Casey Nguyen</td>
+        <td>6:05 PM</td>
+        <td>
+          <div class="dropdown d-inline">
+            <button class="btn btn-light" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg class="bi pe-none me-2" width="20" height="20" fill="#007AFF">
+                <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/request-detail.html">View</a></li>
+              <li><a class="dropdown-item" href="/request-edit.html">Edit</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+       
+        <tr>
+        <th scope="row">201</th>
+       <td><span class="text-body-secondary small text-wrap">Swingline Stapler</span></td>
+           <td><span class="badge text-bg-primary">New</span></td>
+        <td><span class="text-body-secondary small text-wrap">$14.95</span></td>
+        
+        <td>Casey Nguyen</td>
+        <td>6:05 PM</td>
+        <td>
+          <div class="dropdown d-inline">
+            <button class="btn btn-light" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg class="bi pe-none me-2" width="20" height="20" fill="#007AFF">
+                <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/request-detail.html">View</a></li>
+              <li><a class="dropdown-item" href="/request-edit.html">Edit</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+       
+       <tr>
+        <th scope="row">201</th>
+       <td><span class="text-body-secondary small text-wrap">Swingline Stapler</span></td>
+           <td><span class="badge text-bg-warning">Review</span></td>
+        <td><span class="text-body-secondary small text-wrap">$14.95</span></td>
+        
+        <td>Casey Nguyen</td>
+        <td>6:05 PM</td>
+        <td>
+         
+          <div class="dropdown d-inline">
+            <button class="btn btn-light" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg class="bi pe-none me-2" width="20" height="20" fill="#007AFF">
+                <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/request-detail.html">View</a></li>
+              <li><a class="dropdown-item" href="/request-edit.html">Edit</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+        
+        <tr>
+         <th scope="row">201</th>
+       <td><span class="text-body-secondary small text-wrap">Swingline Stapler</span></td>
+           <td><span class="badge text-bg-danger">REJECTED</span></td>
+        <td><span class="text-body-secondary small text-wrap">$14.95</span></td>
+        
+        <td>Casey Nguyen</td>
+        <td>6:05 PM</td>
+        <td>
+          <div class="dropdown d-inline">
+        
+          <div class="dropdown d-inline">
+            <button class="btn btn-light" style="background: none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg class="bi pe-none me-2" width="20" height="20" fill="#007AFF">
+                <use href="/assets/bootstrap-icons.svg#three-dots-vertical" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/request-detail.html">View</a></li>
+              <li><a class="dropdown-item" href="/request-edit.html">Edit</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">Delete</a></li>
+            </ul>
+          </div>
+        </div></td>
+      </tr>
+
+      <!-- more <tr> rows, one per order -->
+    </tbody>
+  </table>
+</section>
+      </section>
+    </main>
+   
+    
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
