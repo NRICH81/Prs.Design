@@ -20,36 +20,42 @@
           <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
             <use href="/assets/bootstrap-icons.svg#plus" />
           </svg>
-       
-        <form class="d-flex flex-wrap w-50 gap-2">
+         
+        <form class="d-flex flex-wrap w-50 gap-2" novalidate data-success="/users.html">
+      
           <div class="row-1 d-flex flex-row w-100 gap-4">
             <div class="mb-3 w-50">
               <label for="firstName" class="form-label">First Name</label>
-              <input id="firstName" type="text" class="form-control" placeholder="Enter First Name" />
+              <input id="firstName" type="text" class="form-control" placeholder="Enter First Name" required/>
+              <div class="invalid-feedback">First Name is required</div>
             </div>
             <div class="mb-3 w-50">
               <label for="lastName" class="form-label">Last Name</label>
-              <input id="lastName" type="text" class="form-control" placeholder="Enter Last Name" />
+              <input id="lastName" type="text" class="form-control" placeholder="Enter Last Name" required/>
+              <div class="invalid-feedback">Last Name is required</div>
             </div>
           </div>
           <div class="row-2 d-flex flex-row w-100 gap-4">
             <div class="mb-3 w-50">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email(Optional)</label>
               <input id="email" type="email" class="form-control" placeholder="Enter Email" />
+              <div class="invalid-feedback">First Name is required</div>
             </div>
             <div class="mb-3 w-50">
-              <label for="phone" class="form-label">Phone</label>
+              <label for="phone" class="form-label">Phone(Optional)</label>
               <input id="phone" type="text" class="form-control" placeholder="Enter Phone Number" />
             </div>
           </div>
           <div class="row-3 d-flex flex-row w-100 gap-4">
             <div class="mb-3 w-50">
               <label for="username" class="form-label">Username</label>
-              <input id="username" type="text" class="form-control" placeholder="Enter Username" />
+              <input id="username" type="text" class="form-control" placeholder="Enter Username" required/>
+              <div class="invalid-feedback">UserName is required</div>
             </div>
             <div class="mb-3 w-50">
               <label for="password" class="form-label">Password</label>
-              <input id="password" type="password" class="form-control" placeholder="Enter Password" />
+              <input id="password" type="password" class="form-control" placeholder="Enter Password" required/>
+              <div class="invalid-feedback">Password is required</div>
             </div>
           </div>
              <div class="row-3 d-flex flex-row w-100 gap-4">
@@ -57,8 +63,9 @@
               <label class="form-label">Role</label>
               <br />
               <div class="form-check form-check-inline">
-                <input id="isReviewer" type="checkbox" class="form-check-input" />
+                <input id="isReviewer" type="checkbox" class="form-check-input" >
                 <label for="isReviewer" class="form-check-label">Reviewer</label>
+             
               </div>
               <div class="form-check form-check-inline">
                 <input id="isAdmin" type="checkbox" class="form-check-input" />
@@ -79,6 +86,7 @@
       </section>
     </main>
     <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="/js/validation.js"></script>
   </body>
 </html>
   
