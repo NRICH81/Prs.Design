@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRS — Edit Vendor</title>
+    <title>PRS — New User</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -11,12 +11,131 @@
     {{> header}}
     <main class="d-flex">
       {{> nav}}
-       <section class="content p-4 flex-grow-1">
+      <section class="content p-4 flex-grow-1">
         <div class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2">
-  <h2>Edit Vendor</h2>
+  <h2>Add Vendor</h2>
   </div>
+     
+         
+          <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+            <use href="/assets/bootstrap-icons.svg#plus" />
+          </svg>
+       
+        
+           <form class="d-flex flex-wrap w-50 gap-2" novalidate data-success="/products.html">
+          <div class="row-1 d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-50">
+              <label for="vendorCode" class="form-label">Vendor Code</label>
+              <input id="vendorCode" type="text" class="form-control" placeholder="MCKE-NZ" required/>
+            </div>
+            <div class="mb-3 w-100">
+              <label for="vendorName" class="form-label">Vendor Name</label>
+              <input id="vendorName" type="text" class="form-control" placeholder="McKenzie Group" required/>
+            </div>
+          </div>
+          
+            <div class="mb-5 w-100">
+              <label for="address" class="form-label">Address</label>
+              <input id="address" type="email" class="form-control" placeholder="7319 Aubree Bridge" required/>
+               <div class="invalid-feedback">Address is required</div>
+            </div>
+            <div class="row-1 d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-50">
+              <label for="city" class="form-label">City</label>
+              <input id="city" type="text" class="form-control" placeholder="Wuckertside" required/>
+               <div class="invalid-feedback">City is required</div>
+            </div>
+
+          <div class="mb-3 w-25">
+        <label class="form-label" for="categoryId">State</label>
+       
+      <select id="stateId" class="form-select" required>
+        <option value="">LA</option>
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+      </select>
+        <div class="invalid-feedback">State is required</div>
+            </div>
+
+           <div class="mb-3 w-25">
+              <label for="zip" class="form-label">Zip</label>
+              <input id="zip" type="text" class="form-control" placeholder="22245" required/>
+               <div class="invalid-feedback">Password is required</div>
+            </div>
+</div>
+<div class="row-1 d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-50">
+              <label for="phone" class="form-label">Phone(Optional)</label>
+              <input id="phone" type="text" class="form-control" placeholder="9408595147" >
+            </div>
+
+            <div class="mb-3 w-50">
+              <label for="email" class="form-label">Email(Optional)</label>
+              <input id="email" type="text" class="form-control" placeholder="support@MCKE-NZ.com" >
+            </div>
+          </div>
+          <div class="row-5 d-flex flex-row justify-content-end w-100 gap-4 mt-4">
+            <a href="/staff.html" class="btn btn-outline-primary me-2">Cancel</a>
+            <button type="submit" class="btn btn-primary">
+              <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                <use href="/assets/bootstrap-icons.svg#save" />
+              </svg>
+              Save Vendor
+            </button>
+          </div>
+        </form>
       </section>
     </main>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
   </body>
 </html>
+  

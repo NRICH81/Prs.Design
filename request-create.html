@@ -11,12 +11,71 @@
     {{> header}}
     <main class="d-flex">
       {{> nav}}
-      <section class="content p-4 flex-grow-1">
-        <div class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2">
-  <h2>Create Request</h2>
-  </div>
+     <section class="content p-4 flex-grow-1">
+        <div class="d-flex justify-content-between pb-4 mb-5 border-bottom border-2">
+          <h2>New Request</h2>
+         </div>
+     
+         
+          <svg class="bi pe-none me-2" width="32" height="32" fill="#FFFFFF">
+            <use href="/assets/bootstrap-icons.svg#plus" />
+          </svg>
+       
+        <form class="d-flex flex-wrap w-50 gap-2">
+          <div class="row-1 d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-50">
+              <label for="vendorCode" class="form-label">Vendor Code</label>
+              <input id="vendorCode" type="text" class="form-control" placeholder="Please enter Vendor Code" required/>
+            </div>
+            
+          <div class="mb-3 w-50">
+        <label class="form-label" for="categoryId">Delivery Method</label>
+      <select id="categoryId" class="form-select">
+        <option value="">Select State...</option>
+        <option value="pickup">Pickup</option>
+        <option value="delivery">Delivery</option>
+        <option value="signatureDelivery">Signature Delivery</option>
+      </select>
+            </div>
+
+          </div>
+           </div>
+           <div class="row-1 d-flex flex-row w-100 gap-4">
+            <div class="mb-3 w-50">
+              <label for="justification" class="form-label">Justification</label>
+              <input id="justification" type="email" class="form-control" placeholder="Enter a justification for your purchase request" required/>
+            </div>
+              <div class="mb-3 w-50">
+        <label class="form-label" for="categoryId">Status</label>
+      <select id="categoryId" disabled class="form-select">
+        <option value="">New</option>
+        
+      </select>
+            </div>
+          </div>
+          <div class="row-1 d-flex flex-row w-100 justify-content-end gap-4">
+            <div class="mb-3 w-50">
+              <label class="form-label" for="categoryId">Requested By</label>
+              <select id="categoryId" disabled class="form-select">
+                <option value="">Hope Hodkiewicz</option>
+              </select>
+            </div>
+          </div>
+
+        
+          <div class="row-5 d-flex flex-row justify-content-end w-100 gap-4 mt-4">
+            <a href="/users.html" class="btn btn-outline-primary me-2">Cancel</a>
+            <button type="submit" class="btn btn-primary">
+              <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                <use href="/assets/bootstrap-icons.svg#save" />
+              </svg>
+              Save Vendor
+            </button>
+          </div>
+        </form>
       </section>
     </main>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+  

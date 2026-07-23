@@ -13,10 +13,182 @@
       {{> nav}}
      <section class="content p-4 flex-grow-1">
         <div class="d-flex justify-content-between pb-4 mb-4 border-bottom border-2">
-  <h2>Request Detail</h2>
-  </div>
+  <h2>Request </h2>
+   <div class="d-flex justify-content-end gap-2">
+           
+            <div class="d-flex gap-2">
+               <button type="button" class="btn btn-primary">
+              <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-up" />
+              </svg>
+              Approve
+            </button>
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+              <svg class="bi pe-none me-2" width="16" height="16" fill="currentColor">
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-down" />
+              </svg>
+              Reject
+            </button>
+              <a href="/request-edit.html" class="btn btn-outline">
+                <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                  <use href="/assets/bootstrap-icons.svg#pencil" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section class="detail-header justify-content-between pe-5">
+          <dl>
+            <dt>Description</dt>
+            <dd>Office Supplies</dd>
+            <dt>Justification</dt>
+            <dd>Need to reup</dd>
+          </dl>
+          <dl>
+            
+            <dt>Delivery Method</dt>
+            <dd>Pickup</dd>
+            <dt>Status</dt>
+            <dd><span class="badge text-bg-warning">REVIEW</span></dd>
+          </dl>
+          <dl>
+            <dt>Requested By</dt>
+            <dd>Russel Kassulke</dd>
+           
+          </dl>
+        </section>
+
+        <div class="card p-4 mt-5">
+          <h5 class="card-title">Items</h5>
+          <table class="table w-75">
+            <thead>
+              <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ribeye Steak</td>
+                <td>$85.29</td>
+                <td>1</td>
+                <td>$85.29</td>
+                
+                <td>
+                  <a href="/request-edit.html" class="btn btn-outline">
+                    <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                      <use href="/assets/bootstrap-icons.svg#pencil" />
+                    </svg>
+                  </a>
+                  <button type="button" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">
+                    <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                      <use href="/assets/bootstrap-icons.svg#trash" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Fantastic Ceramic Hat</td>
+                <td>$68.30</td>
+                <td>3</td>
+                <td>$204.90</td>
+                
+                <td>
+                  <a href="/request-edit.html" class="btn btn-outline">
+                    <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                      <use href="/assets/bootstrap-icons.svg#pencil" />
+                    </svg>
+                  </a>
+                  <button type="button" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#deleteRequestModal">
+                    <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                      <use href="/assets/bootstrap-icons.svg#trash" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+              
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  <a href="/request-create.html" class="btn btn-outline-primary">
+                    <svg class="bi pe-none me-2" width="16" height="16" fill="#007AFF">
+                      <use href="/assets/bootstrap-icons.svg#plus-circle" />
+                    </svg>
+                    Add a line
+                  </a>
+                </td>
+                <td></td>
+                <td></td>
+                <td>290.19</td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Reject Request</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form novalidate data-success="/Requestss.html">
+                  <div class="mb-3">
+                    <label class="form-label" for="rejectionReason">Rejection Reason</label>
+                    <textarea
+                      class="form-control"
+                      id="rejectionReason"
+                      rows="6"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Rejection reason is required</div>
+                  </div>
+                  <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Rejection</button>
+                    <button type="submit" class="btn btn-primary">
+                      <svg class="bi pe-none me-2" width="16" height="16" fill="#FFFFFF">
+                        <use href="/assets/bootstrap-icons.svg#save" />
+                      </svg>
+                      Confirm
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="deleteRequestModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Delete Request</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete this  item?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+                <textarea class="form-control" id="cancellationReasona" rows="6" required></textarea>
+                <div class="invalid-feedback">Reason for cancellation is required</div>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="/js/validation.js"></script>
   </body>
 </html>
